@@ -1,13 +1,17 @@
 scott:
-
   first_name: 'scott'
   last_name: 'harris'
-  profile_name: '2big2fail'
   email: 'scottharris86@outlook.com'
+  profile_name: '2big2fail'
 
 steve:
-
   first_name: 'steve'
   last_name: 'jones'
-  profile_name: 'stevejones'
   email: 'steve@jones.com'
+  profile_name: 'stevejones'
+
+chad:
+  first_name: 'chad'
+  last_name: 'scanlon'
+  email: 'chadley@yahoo.com'
+  profile_name: 'chadley'
