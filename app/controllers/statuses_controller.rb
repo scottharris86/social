@@ -46,7 +46,7 @@ class StatusesController < ApplicationController
       params[:status].delete(:user_id)
     end
     respond_to do |format|
-      if @status.update(status_params)
+      if @status.update(status_params)#update_attributes(params[:status])
         format.html { redirect_to @status, notice: 'Status was successfully updated.' }
         format.json { render :show, status: :ok, location: @status }
       else

@@ -7,6 +7,12 @@ class UserTest < ActiveSupport::TestCase
 
   should have_many(:user_friendships)
   should have_many(:friends)
+  should have_many(:pending_user_friendships)
+  should have_many(:pending_friends)
+  should have_many(:requested_user_friendships)
+  should have_many(:requested_friends)
+  should have_many(:blocked_user_friendships)
+  should have_many(:blocked_friends)
 
   test "a user should enter a first name" do
     user = User.new
@@ -59,9 +65,22 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "that creating a friendship works" do
-    users(:scott).friends << users(:chad)
-    users(:scott).friends.reload
-    assert users(:scott).friends.include?(users(:chad))
+    users(:scott).pending_friends << users(:steve)
+    users(:scott).pending_friends.reload
+    assert users(:scott).pending_friends.include?(users(:steve))
+  end
+
+  test "that calling to param on a user shows the profile name" do
+    assert_equal "2big2fail", users(:scott).to_param
+  end
+
+  context "#has_blocked?" do
+    should "return true if a user has blocked another user" do
+      assert users(:scott).has_blocked?(users(:blocked_friend))
+    end
+    should "return false if a user has not blocked another user" do
+      assert !users(:scott).has_blocked?(users(:steve))
+    end
   end
 
 end

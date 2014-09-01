@@ -9,9 +9,16 @@ steve:
   last_name: 'jones'
   email: 'steve@jones.com'
   profile_name: 'stevejones'
+  encrypted_password: $2a$10$Fh/Hm8RxDsuPTeBUr6864.GARlcmt7zF2WspaXGr3BIv2C27N.osq
 
 chad:
   first_name: 'chad'
   last_name: 'scanlon'
   email: 'chadley@yahoo.com'
   profile_name: 'chadley'
+
+blocked_friend:
+  first_name: 'Blocked'
+  last_name: 'Friend'
+  email: 'blocked@blocked.com'
+  profile_name: 'youblockedme'

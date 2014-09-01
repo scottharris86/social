@@ -9,6 +9,12 @@ gem 'pg'
 gem 'devise'
 # Simple_form for nice forms
 gem 'simple_form'
+# State_machine for friend requests
+gem 'state_machine'
+# draver for views
+gem 'draper'
+# Javascript routes
+gem 'js-routes'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -33,6 +39,11 @@ gem 'spring',        group: :development
 # Shoulda testing Gem
 group :test do
   gem 'shoulda'
+  gem 'factory_girl_rails'
+end
+group :development do
+    gem 'log_buddy'
+    gem 'thin'
 end
 
 # Use ActiveModel has_secure_password
