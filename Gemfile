@@ -11,6 +11,8 @@ gem 'devise'
 gem 'simple_form'
 # State_machine for friend requests
 gem 'state_machine'
+# paper clip for file uploads
+gem 'paperclip'
 # draver for views
 gem 'draper'
 # Javascript routes
